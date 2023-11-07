@@ -1,0 +1,14 @@
+D:\c#_practicum\c#_control_work\testWork\bin\Debug\net6.0\testWork.exe
+D:\c#_practicum\c#_control_work\testWork\bin\Debug\net6.0\testWork.deps.json
+D:\c#_practicum\c#_control_work\testWork\bin\Debug\net6.0\testWork.runtimeconfig.json
+D:\c#_practicum\c#_control_work\testWork\bin\Debug\net6.0\testWork.dll
+D:\c#_practicum\c#_control_work\testWork\bin\Debug\net6.0\testWork.pdb
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.AssemblyInfoInputs.cache
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.AssemblyInfo.cs
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.csproj.CoreCompileInputs.cache
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.dll
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\refint\testWork.dll
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.pdb
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\testWork.genruntimeconfig.cache
+D:\c#_practicum\c#_control_work\testWork\obj\Debug\net6.0\ref\testWork.dll
