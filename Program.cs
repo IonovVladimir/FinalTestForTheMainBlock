@@ -43,7 +43,7 @@ internal class Program
         Console.WriteLine($"Входной массив состоит из {n} элементов.");
         string[] strAr = new string[n];
 
-        FillStrArray(strAr, n );
+        FillStrArray(strAr, n);
         Console.WriteLine();
         Console.WriteLine("~~~~~~~~~");
         Console.WriteLine();
