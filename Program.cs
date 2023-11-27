@@ -38,7 +38,7 @@ internal class Program
             }
         }
 
-
+       
         int n = InputStrToInt("Введи размер входного массива = ");
         Console.WriteLine($"Входной массив состоит из {n} элементов.");
         string[] strAr = new string[n];
@@ -48,6 +48,24 @@ internal class Program
         Console.WriteLine("~~~~~~~~~");
         Console.WriteLine();
         PrintStrArray(strAr, n);
+
+        //продолжение
+        Console.WriteLine("~~~~~~~~~");
+
+        string[] strNewArr = new string[n];
+        int m = InputStrToInt("Введи ограничение по количеству символов = ");
+        int count = 0;
+
+        for (int i = 0; i < n; i++) 
+        {
+            if (strAr[i].Length <= m) 
+            {
+                strNewArr[count] = strAr[i];
+                count++;
+            }
+        }
+
+        PrintStrArray(strNewArr, count);
 
 
 
