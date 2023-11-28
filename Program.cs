@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 
 internal class Program
 {
@@ -13,16 +12,16 @@ internal class Program
         //пользоваться коллекциями, лучше обойтись исключительно массивами.
 
         //функция чтения с консоли и перевода в целые числа
-        int InputStrToInt(string text) 
+        int InputStrToInt(string text)
         {
             Console.WriteLine(text);
-            return Convert.ToInt32(Console.ReadLine()); 
+            return Convert.ToInt32(Console.ReadLine());
         }
 
         //функция заполнения массива с консоли (работает ли?)
-        void FillStrArray(string[] strAr, int n ) 
+        void FillStrArray(string[] strAr, int n)
         {
-            for (int i = 0; i < n; i++) 
+            for (int i = 0; i < n; i++)
             {
                 Console.WriteLine($"Введи {i} элемент массива");
                 strAr[i] = Console.ReadLine();
@@ -30,20 +29,21 @@ internal class Program
         }
 
         //функция вывода элементов массива
-        void PrintStrArray(string[] strAr, int n) 
+        void PrintStrArray(string[] strAr, int n)
         {
-            for (int i = 0; i < n; i++) 
-            { 
+            for (int i = 0; i < n; i++)
+            {
                 Console.WriteLine($"{i}: {strAr[i]} ");
             }
         }
 
-       
+
         int n = InputStrToInt("Введи размер входного массива = ");
+
         Console.WriteLine($"Входной массив состоит из {n} элементов.");
         string[] strAr = new string[n];
 
-        FillStrArray(strAr, n );
+        FillStrArray(strAr, n);
         Console.WriteLine();
         Console.WriteLine("~~~~~~~~~");
         Console.WriteLine();
@@ -52,7 +52,9 @@ internal class Program
         //продолжение
         Console.WriteLine("~~~~~~~~~");
 
-        string[] strNewArr = new string[n];
+        //string[] strNewArr = new string[n];
+        List<string> strNewArr = new List<string>();
+
         int m = InputStrToInt("Введи ограничение по количеству символов = ");
         int count = 0;
 
@@ -60,13 +62,29 @@ internal class Program
         {
             if (strAr[i].Length <= m) 
             {
-                strNewArr[count] = strAr[i];
+                //strNewArr[count] = strAr[i];
+                strNewArr.Add(strAr[i]);
                 count++;
             }
         }
 
-        PrintStrArray(strNewArr, count);
+        //PrintStrArray(strNewArr, count);
+        //Console.WriteLine(strNewArr);
 
+        Console.WriteLine($"count= {count}");
+        Console.Write("[");
+        foreach (string element in strNewArr)
+        {
+            if (strNewArr.Count < count)
+            {
+                Console.Write($"“{element}”, ");
+            }
+            else 
+            {
+                Console.Write($"“{element}”");
+            }
+        }
+        Console.Write("]");
 
 
     }
