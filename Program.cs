@@ -65,7 +65,6 @@ internal class Program
         //продолжение
         Console.WriteLine("~~~~~~~~~");
 
-        //string[] strNewArr = new string[n];
         List<string> strNewArr = new List<string>();
 
         int m = InputStrToInt("Введи ограничение по количеству символов = ");
@@ -75,25 +74,10 @@ internal class Program
         {
             if (strAr[i].Length <= m) 
             {
-                //strNewArr[count] = strAr[i];
                 strNewArr.Add(strAr[i]);
                 count++;
             }
-        }
-
-        //PrintStrArray(strNewArr, count);
-        //Console.WriteLine(strNewArr);
-
-        Console.WriteLine($"count= {count}");
-        Console.Write("[");
-        
-
-        //for (int i = 0; i < count; i++) 
-        //{
-        //    if(i < count-1) Console.Write($"“{strNewArr[i]}”, ");
-        //    else Console.Write($"“{strNewArr[i]}”");
-        //}
-        Console.Write("]");
+        }      
 
         PrintOutList(strNewArr, count);
     }
