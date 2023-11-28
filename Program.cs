@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 internal class Program
 {
@@ -37,6 +38,18 @@ internal class Program
             }
         }
 
+        //функция вывода List
+        void PrintOutList(List<string> list, int count)
+        {
+            Console.Write("[");
+
+            for (int i = 0; i < count; i++)
+            {
+                if (i < count - 1) Console.Write($"“{list[i]}”, ");
+                else Console.Write($"“{list[i]}”");
+            }
+            Console.Write("]");
+        }
 
         int n = InputStrToInt("Введи размер входного массива = ");
 
@@ -73,19 +86,15 @@ internal class Program
 
         Console.WriteLine($"count= {count}");
         Console.Write("[");
-        foreach (string element in strNewArr)
-        {
-            if (strNewArr.Count < count)
-            {
-                Console.Write($"“{element}”, ");
-            }
-            else 
-            {
-                Console.Write($"“{element}”");
-            }
-        }
+        
+
+        //for (int i = 0; i < count; i++) 
+        //{
+        //    if(i < count-1) Console.Write($"“{strNewArr[i]}”, ");
+        //    else Console.Write($"“{strNewArr[i]}”");
+        //}
         Console.Write("]");
 
-
+        PrintOutList(strNewArr, count);
     }
 }
