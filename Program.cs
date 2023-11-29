@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Drawing;
+using System.Xml.Linq;
 
 internal class Program
 {
@@ -13,16 +13,16 @@ internal class Program
         //пользоваться коллекциями, лучше обойтись исключительно массивами.
 
         //функция чтения с консоли и перевода в целые числа
-        int InputStrToInt(string text) 
+        int InputStrToInt(string text)
         {
             Console.WriteLine(text);
-            return Convert.ToInt32(Console.ReadLine()); 
+            return Convert.ToInt32(Console.ReadLine());
         }
 
         //функция заполнения массива с консоли (работает ли?)
-        void FillStrArray(string[] strAr, int n ) 
+        void FillStrArray(string[] strAr, int n)
         {
-            for (int i = 0; i < n; i++) 
+            for (int i = 0; i < n; i++)
             {
                 Console.WriteLine($"Введи {i} элемент массива");
                 strAr[i] = Console.ReadLine();
@@ -30,16 +30,29 @@ internal class Program
         }
 
         //функция вывода элементов массива
-        void PrintStrArray(string[] strAr, int n) 
+        void PrintStrArray(string[] strAr, int n)
         {
-            for (int i = 0; i < n; i++) 
-            { 
+            for (int i = 0; i < n; i++)
+            {
                 Console.WriteLine($"{i}: {strAr[i]} ");
             }
         }
 
+        //функция вывода List
+        void PrintOutList(List<string> list, int count)
+        {
+            Console.Write("[");
+
+            for (int i = 0; i < count; i++)
+            {
+                if (i < count - 1) Console.Write($"“{list[i]}”, ");
+                else Console.Write($"“{list[i]}”");
+            }
+            Console.Write("]");
+        }
 
         int n = InputStrToInt("Введи размер входного массива = ");
+
         Console.WriteLine($"Входной массив состоит из {n} элементов.");
         string[] strAr = new string[n];
 
@@ -49,7 +62,23 @@ internal class Program
         Console.WriteLine();
         PrintStrArray(strAr, n);
 
+        //продолжение
+        Console.WriteLine("~~~~~~~~~");
 
+        List<string> strNewArr = new List<string>();
 
+        int m = InputStrToInt("Введи ограничение по количеству символов = ");
+        int count = 0;
+
+        for (int i = 0; i < n; i++) 
+        {
+            if (strAr[i].Length <= m) 
+            {
+                strNewArr.Add(strAr[i]);
+                count++;
+            }
+        }      
+
+        PrintOutList(strNewArr, count);
     }
 }
