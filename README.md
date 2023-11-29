@@ -24,7 +24,7 @@
 ## Ссылки.
 
 * Ссылка на GitHub: 
-тут должна быть ссылка
+https://github.com/IonovVladimir/FinalTestForTheMainBlock.git
 
 * Ссылка на draw.io:
 https://drive.google.com/file/d/10_EnSSxmK8eLp_9J6XoDsU3fZ-ut_7l1/view?usp=sharing
